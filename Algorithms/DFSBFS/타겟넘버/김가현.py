@@ -1,25 +1,15 @@
-def dfs(numbers, target, level, sum):
-    
-    global cnt
-    n = len(numbers)
-    cnt = 0
-    
-    if n == level & sum == target:
-        cnt += 1
+def dfs(numbers, target, level, v):
+    if len(numbers) == level:
+        if v == target:
+            global cnt
+            cnt += 1
         return
-    
-    elif n == level:
-        return
-    
-    dfs(numbers, target, level + 1, sum + numbers[level])
-    dfs(numbers, target, level + 1, sum - numbers[level] )
-    
-    return 
+
+    dfs(numbers, target, level + 1, v + numbers[level])
+    dfs(numbers, target, level + 1, v - numbers[level])
 
 def solution(numbers, target):
-    
-    global cnt 
-    
-    dfs(numbers, target, 0,0)
-    
+    global cnt
+    cnt = 0
+    dfs(numbers, target, 0, 0) 
     return cnt
