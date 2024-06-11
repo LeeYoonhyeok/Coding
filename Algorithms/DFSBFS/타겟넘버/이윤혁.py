@@ -1,7 +1,6 @@
 def solution(numbers, target):
-    ans = 0
+    
     def dfs(level, sum):
-        global ans
         if level == len(numbers):
             if sum == target:
                 return 1
