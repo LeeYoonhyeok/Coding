@@ -1,9 +1,11 @@
-# level : max는 8까지 / branch : 던전 선택도 8개까지
+# level : max는 8까지 / branch : 던전 선택도 8개까지 = 8의 8승
 # 모든 던전을 다 돌면서 체크 --> dfs
 # 던전을 돌기전에 k >= 던전[][0] 체크
 # k는 던전[][1]을 계속 빼간다
 # 중복 방지를 위해 visited 배열을 사용
 # dfs와 solution 기능별 구분
+
+# 참조하고 공부하여 풀었으나 내일 다시 복습(필)
 
 def dfs(k, dungeons, visited, cnt):
     global answer # 전역변수 지정
@@ -18,6 +20,6 @@ def solution(k, dungeons):
     global answer
     answer = 0
     visited = [False]*len(dungeons)
-    dungeons.sort(key = lambda x : x[0], reverse=True) # 최소피로도 오름차 정렬
+    dungeons.sort(key = lambda x : x[0], reverse=True) # 최소피로도 내림차 정렬
     dfs(k, dungeons, visited, 0) # cnt 0부터 출발
     return answer
