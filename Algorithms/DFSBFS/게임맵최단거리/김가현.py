@@ -20,8 +20,8 @@ def solution(maps):
             ny = y + dy[i]
             
             if 0 <= nx < n and 0 <= ny < m:
+                
                 # 방문한 적이 없는 좌표이고 지도에 길이 존재해야함
-            
                 if not visited[nx][ny] and maps[nx][ny] == 1:
                     queue.append((nx, ny))
                     visited[nx][ny] = visited[x][y] + 1
