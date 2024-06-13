@@ -20,7 +20,6 @@ def dfs(k, dungeons, visited, cnt):
 def solution(k, dungeons):
     global answer
     answer = -1
-    dungeons.sort(key = lambda x : x[1], reverse = True) # 최소 필요도 순으로 정렬
     n = len(dungeons)
     visited = [False] * n
     dfs(k, dungeons, visited, 0)
