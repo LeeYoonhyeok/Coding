@@ -14,4 +14,7 @@ Repository/
     ├── Binary Search
     ├── Greedy
     └── DP
+└── DataStructure
+    ├── 해쉬
+    ├── ...
 ```
