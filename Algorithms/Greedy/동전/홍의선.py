@@ -6,10 +6,9 @@ N, K = map(int, input().split())
 coins = [int(input()) for _ in range(N)]
 
 cnt = 0
-for i in range(N-1, -1, -1):
-    share = int(K/coins[i])
-    K = int(K%coins[i])
-    
+for coin in coins[::-1]:
+    share = int(K/coin)
+    K = int(K%coin)
     cnt += share
 
 print(cnt)
