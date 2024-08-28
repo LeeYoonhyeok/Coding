@@ -20,7 +20,6 @@ def update_position(d_pos, r_pos, cap, deliveries, pickups):
     while d_pos >= 0:
         # 해당 집 배달 개수를 더했을 때, 최대 보관할 수 있는 택배 개수를 넘기는지?
         sum_boxes = deliveries[d_pos] + current_boxes
-        
         if sum_boxes > cap:
             # 현재위치는 한번에 모든 택배를 배달하진 못하지만, cap에 저장할 수 있는데까지 일부 배달 가능
             deliveries[d_pos] -= (cap - current_boxes)
@@ -33,7 +32,6 @@ def update_position(d_pos, r_pos, cap, deliveries, pickups):
     while r_pos >= 0:
         # 해당 집 배달 개수를 더했을 때, 최대 보관할 수 있는 택배 개수를 넘기는지?
         sum_boxes = pickups[r_pos] + current_boxes
-        
         if sum_boxes > cap:
             pickups[r_pos] -= (cap - current_boxes)
             break 
