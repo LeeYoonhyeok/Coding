@@ -3,18 +3,23 @@
 Repository/
 ├── README.md
 └── Algorithms
-    ├── 브루트포스
-    ├── 수학
-    ├── 문자열
-    ├── DFS&BFS
+    ├── Sorting *
+    ├── Search (Binary Search) *
+    ├── Dynamic Programming (DP) *
+    ├── Greedy *
+    ├── DFS&BFS (Graph) *
+    ├── Backtracking *
+    ├── Math *
+    ├── String
     ├── Dijkstra
-    ├── Union-Find
     ├── MST
-    ├── Segment Tree
-    ├── Binary Search
-    ├── Greedy
-    └── DP
+    ├── Union-Find
+    ├── BruteForce
+    └── Segment Tree
 └── DataStructure
-    ├── 해쉬
-    ├── ...
+    ├── Hash *
+    ├── Stack
+    ├── Queue
+    ├── LinkedList
+    └── ...
 ```
