@@ -17,6 +17,7 @@ for i in range(K+1): # 0을 만드는 경우의 수 = 1
     
 for i in range(2, K+1):
     for j in range(1, N+1):
-        dp[i][j] = (dp[i-1][j] + dp[i][j-1]) % MOD
+        dp[i][j] = (dp[i-1][j] + dp[i][j-1]) % MOD 
+        # 0을 추가했을 때 합이 j가 되는 경우 + 1을 추가했을 때 합이 j가 되는 경우
         
 print(dp[-1][-1])
